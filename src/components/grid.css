@@ -1,0 +1,35 @@
+html {
+	font-family: 'Nunito', georgia, sans-serif;
+	box-sizing: border-box;
+	overflow-y: scroll;
+}
+
+* {
+	box-sizing: inherit;
+}
+
+*:before {
+	box-sizing: inherit;
+}
+
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	color: black;
+	font-weight: normal;
+	word-wrap: break-word;
+	font-kerning: normal;
+}
+
+img {
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	margin: 10px 0 0 0;
+}
+  
