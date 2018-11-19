@@ -128,10 +128,10 @@ export default class PokemonPage extends React.Component {
 						The Indigo League believes that only the best Pokemon trainer can turn any Pokemon into a champion, regardless of type or inherent ability.
 					</p>
 					<p>
-						With this irrefutable truth in mind, the Indigo League is excited to announce the introduction of a new tournament mode, Wild Bench.
+						With this irrefutable truth in mind, the Indigo League is excited to announce the introduction of a new tournament mode, Wild Team.
 					</p>
 					<p>
-						In the new Wild Bench tournament mode, you will be presented with 151 pokeballs, each containing 1 of the original 151 Pokemon.
+						In the new Wild Team tournament mode, you will be presented with 151 pokeballs, each containing 1 of the original 151 Pokemon.
 						You will randomly select 6 Pokemon from the pokeballs, which will make up your bench to train and battle with.
 					</p>
 					<p>
@@ -168,14 +168,21 @@ export default class PokemonPage extends React.Component {
 					closeOnEsc={false}
 					closeMaskOnClick={false}
 					showCloseButton={false}
+					customStyles={{
+						maxWidth: '400px',
+						width: 'auto',
+						height: 'auto',
+  						bottom: 'auto',
+  						top: '30%'
+					}}
 				>
-					<h2 className={textCenter} >Your New Bench Is</h2>
-					<p>{stringOfPokemon}</p>
-					<h2 className={textCenter} >Share Your Bench</h2>
+					<h2 className={textCenter} >Your New Team Is</h2>
+					<p className={textCenter} >{stringOfPokemon}</p>
+					<h2 className={textCenter} >Share Your Team</h2>
 
 					<div className={textCenter} >
 						{this.state.benchArray[5] &&
-							<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" className="twitter-share-button" data-text={`My new Pokemon bench: ${stringOfPokemon}`} data-size="large" data-show-count="false">Tweet</a>
+							<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" className="twitter-share-button" data-text={`My new Pokemon team is ${stringOfPokemon}.`} data-size="large" data-show-count="false">Tweet</a>
 						}
 					</div>
 				</Rodal>
@@ -188,7 +195,7 @@ export default class PokemonPage extends React.Component {
 					className={css`
 						text-align: center;
 					`}
-				>Your Bench</h3>
+				>Your Team</h3>
 				<Bench 
 					bench={this.state.benchArray}
 				/>

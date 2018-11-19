@@ -10,6 +10,16 @@ module.exports = {
         path: `./src/data/`,
       },
 	},
+	{
+		resolve: 'gatsby-plugin-prefetch-google-fonts',
+		options: {
+		  fonts: [
+			{
+			  family: `Nunito`,
+			}
+		  ]
+		}
+	}
     // 'gatsby-plugin-react-helmet',
     // {
     //   resolve: `gatsby-source-filesystem`,

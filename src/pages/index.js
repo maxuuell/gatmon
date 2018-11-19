@@ -1,8 +1,9 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import '../components/grid.css'
+import '../components/general-styles.css'
 import Helmet from 'react-helmet'
 import PokemonPage from '../components/pokemonPage';
+import Footer from '../components/Footer';
 
 const IndexPage = () => (
 	<StaticQuery
@@ -25,11 +26,12 @@ const IndexPage = () => (
 						title={"Pokemon Bench"}
 					>
 						<html lang="en" />
-						<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" />
+						{/* <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" /> */}
 					</Helmet>
 					<PokemonPage
 						data={data}
 					/>
+					<Footer />
 				</>
 			)
 		}}
