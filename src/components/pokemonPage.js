@@ -1,6 +1,7 @@
 import React from 'react';
 import Rodal from 'rodal';
 import { css } from 'emotion'
+import styled from 'react-emotion'
 import Pokeballs from '../components/pokeballs';
 import Bench from '../components/Bench';
 
@@ -18,6 +19,15 @@ const textCenter = css({
 const pokemonImg = css({
 	width: '125px'
 })
+
+const Button = styled('button')`
+  display: block;
+  margin: 0 auto;
+  max-width: 100px;
+  border: 1px solid green;
+  padding: 10px;
+  font-size: 17px;
+`
 
 export default class PokemonPage extends React.Component {
 	constructor(props) {
@@ -87,6 +97,16 @@ export default class PokemonPage extends React.Component {
 		}
 		this.setState({
 			showPokemonModal: false,
+		})
+	}
+
+	resetBench = () => {
+		this.setState({
+			currentStep: 0,
+			benchArray: [false, false, false, false, false, false],
+			selectedPokemonName: "",
+			selectedPokemonUrl: "",
+			showSocialShare: false,
 		})
 	}
 
@@ -185,6 +205,10 @@ export default class PokemonPage extends React.Component {
 							<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" className="twitter-share-button" data-text={`My new Pokemon team is ${stringOfPokemon}.`} data-size="large" data-show-count="false">Tweet</a>
 						}
 					</div>
+					{/* <p className={textCenter}>or</p>
+					<Button
+						onClick={this.resetBench}
+					>Try Again</Button> */}
 				</Rodal>
 				<h1
 					className={css`
